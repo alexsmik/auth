@@ -1,8 +1,15 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const authRouter = require('./authRouter');
 const PORT = process.env.PORT || 5000
 const app = express();
-const start = () => {
+
+app.use(express.json());
+app.use('/auth', authRouter);
+
+const start = async () => {
     try {
+        await mongoose.connect(`mongodb+srv://alextotun:tun654321@cluster0.iuobr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
         app.listen(PORT, () => console.log(`...server started on port:${PORT}`));
     } catch (e) {
         console.log(e);
