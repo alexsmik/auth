@@ -4,12 +4,12 @@ const router = express.Router();
 const { authenticateUser } = require('../middleware/authentication');
 
 const {
-    register,
-    login,
-    logout,
-    verifyEmail,
-    forgotPassword,
-    resetPassword,
+  register,
+  login,
+  logout,
+  verifyEmail,
+  forgotPassword,
+  resetPassword,
 } = require('../controllers/auth');
 
 router.post('/register', register);
