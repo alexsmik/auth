@@ -36,10 +36,12 @@ const register = async (req, res) => {
   // const origin = 'http://localhost:3000';
   // const newOrigin = 'https://react-node-user-workflow-front-end.netlify.app';
 
-  // const tempOrigin = req.get('origin');
+  const tempOrigin = req.get('origin');
+  console.log("🚀 ~ file: auth.js:40 ~ register ~ tempOrigin:", tempOrigin)
   // const protocol = req.protocol;
   // const host = req.get('host');
-  // const forwardedHost = req.get('x-forwarded-host');
+  const forwardedHost = req.get('x-forwarded-host');
+  console.log("🚀 ~ file: auth.js:44 ~ register ~ forwardedHost:", forwardedHost)
   // const forwardedProtocol = req.get('x-forwarded-proto');
 
   // ! disable verificationToken
