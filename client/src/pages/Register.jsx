@@ -10,6 +10,7 @@ const Register = () => {
     email: '',
     password: '',
   });
+  console.log('🚀 ~ file: Register.jsx:13 ~ Register ~ values:', values);
   const navigate = useNavigate();
   const {
     alert,
