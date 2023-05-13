@@ -19,7 +19,6 @@ const Login = () => {
     email: '',
     password: '',
   });
-  console.log('🚀 ~ file: Login.jsx:22 ~ Login ~ values:', values);
   const { alert, showAlert, loading, setLoading, hideAlert } = useLocalState();
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -30,7 +29,6 @@ const Login = () => {
     setLoading(true);
     const { email, password } = values;
     const loginUser = { email, password };
-    console.log('🚀 ~ file: Login.jsx:32 ~ onSubmit ~ loginUser:', loginUser);
     try {
       const { data } = await axios.post(`/api/auth/login`, loginUser);
       setValues({ name: '', email: '', password: '' });

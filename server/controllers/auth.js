@@ -32,7 +32,7 @@ const register = async (req, res) => {
     role,
     verificationToken,
   });
-  const origin = 'auth-front-bwb6.onrender.com';
+  // const origin = 'auth-front-bwb6.onrender.com';
   // const origin = 'http://localhost:3000';
   // const newOrigin = 'https://react-node-user-workflow-front-end.netlify.app';
 
