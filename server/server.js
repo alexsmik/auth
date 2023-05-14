@@ -27,9 +27,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
 //The 404 Route (ALWAYS Keep this as the last route)
-app.get('*', function (req, res) {
-  res.send(404);
-});
+// app.get('*', function (req, res) {
+//   res.send(404);
+// });
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
