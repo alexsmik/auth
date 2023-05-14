@@ -22,9 +22,9 @@ app.use(express.static('dist'));
 // app.use(express.static(__dirname));
 
 //You can use this to check if your server is working
-app.get('/', (req, res) => {
-  res.send('Welcome to your server');
-});
+// app.get('/', (req, res) => {
+//   res.send('Welcome to your server');
+// });
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
