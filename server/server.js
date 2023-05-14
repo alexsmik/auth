@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
-app.use(express.static('build'));
+app.use(express.static('dist'));
 // app.use(express.static(__dirname));
 
 //You can use this to check if your server is working
