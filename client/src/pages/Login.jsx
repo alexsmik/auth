@@ -30,7 +30,10 @@ const Login = () => {
     const { email, password } = values;
     const loginUser = { email, password };
     try {
-      const { data } = await axios.post(`/api/auth/login`, loginUser);
+      const { data } = await axios.post(
+        `/api/auth/login`,
+        loginUser
+      );
       setValues({ name: '', email: '', password: '' });
       showAlert({
         text: `Welcome, ${data.user.name}. Redirecting to dashboard...`,
