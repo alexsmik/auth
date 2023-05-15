@@ -18,20 +18,11 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
-app.use(express.static('dist'));
-// app.use(express.static(__dirname));
-
-//You can use this to check if your server is working
-// app.get('/', (req, res) => {
-//   res.send('Welcome to your server');
-// });
+// production mode build(dist) frontend in backend
+// app.use(express.static('dist'));
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
-
-// app.get("/*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "index.html"));
-// });
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);

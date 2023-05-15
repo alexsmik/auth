@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useLocalState from '../utils/localState';
 import axios from 'axios';
-import { Form, Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormRow from '../components/FormRow';
 
 const Register = () => {
@@ -10,7 +10,6 @@ const Register = () => {
     email: '',
     password: '',
   });
-  console.log('🚀 ~ file: Register.jsx:13 ~ Register ~ values:', values);
   const navigate = useNavigate();
   const {
     alert,
@@ -21,6 +20,7 @@ const Register = () => {
     setSuccess,
     hideAlert,
   } = useLocalState();
+  
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };

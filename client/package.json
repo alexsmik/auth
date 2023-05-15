@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.4",
     "dotenv": "^16.0.3",
-    "env-cmd": "^10.1.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,7 +19,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:staging": "env-cmd -f .env.staging npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,8 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://user-auth-two.onrender.com",
-  "devDependencies": {
-    "http-proxy-middleware": "^2.0.6"
-  }
+  "proxy": "http://localhost:5001"
 }
